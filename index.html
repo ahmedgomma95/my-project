@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>من فكرة صغيرة إلى مستقبل كبير</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: linear-gradient(135deg, #eef7ff, #f8f1ff);
+            color: #222;
+            line-height: 1.9;
+        }
+
+        /* =========================
+           رأس الموقع
+        ========================== */
+
+        header {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+
+            background:
+                linear-gradient(
+                    rgba(8, 35, 70, 0.80),
+                    rgba(20, 10, 70, 0.85)
+                ),
+                url("students.webp") center/cover;
+
+            color: white;
+        }
+
+        .hero {
+            max-width: 900px;
+            animation: fadeIn 2s ease;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 20px;
+            color: #ffd84d;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 21px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 35px;
+            background: #00c9a7;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #008f7a;
+            transform: scale(1.05);
+        }
+
+        /* =========================
+           الأقسام
+        ========================== */
+
+        section {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 45px;
+            background: white;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+        }
+
+        .title {
+            text-align: center;
+            color: #173f75;
+            font-size: 35px;
+            margin-bottom: 30px;
+        }
+
+        .title span {
+            color: #00a88f;
+        }
+
+        .story {
+            font-size: 19px;
+            text-align: justify;
+        }
+
+        .story p {
+            margin-bottom: 20px;
+        }
+
+        /* =========================
+           الاقتباسات
+        ========================== */
+
+        .quote {
+            background: linear-gradient(135deg, #173f75, #684bb5);
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin: 30px 0;
+            font-size: 23px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* =========================
+           البطاقات
+        ========================== */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: #f4f9ff;
+            padding: 30px;
+            text-align: center;
+            border-radius: 20px;
+            border-top: 5px solid #00bfa6;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+
+        .card .icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #173f75;
+            margin-bottom: 10px;
+        }
+
+        /* =========================
+           الصور
+        ========================== */
+
+        .image-box {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .image-box img {
+            width: 80%;
+            max-width: 750px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.20);
+        }
+
+        .caption {
+            color: #666;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        /* =========================
+           جزء الكود
+        ========================== */
+
+        .code-box {
+            background: #101827;
+            color: #5ff5c4;
+            padding: 25px;
+            border-radius: 15px;
+            direction: ltr;
+            text-align: left;
+            font-family: Consolas, monospace;
+            font-size: 18px;
+            margin-top: 25px;
+        }
+
+        /* =========================
+           رسالة النهاية
+        ========================== */
+
+        .final {
+            text-align: center;
+            background: linear-gradient(135deg, #173f75, #00a88f);
+            color: white;
+        }
+
+        .final h2 {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .final p {
+            font-size: 22px;
+        }
+
+        /* =========================
+           الفوتر
+        ========================== */
+
+        footer {
+            background: #101827;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        footer strong {
+            color: #ffd84d;
+        }
+
+        /* =========================
+           الحركة
+        ========================== */
+
+        @keyframes fadeIn {
+
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        /* =========================
+           الموبايل
+        ========================== */
+
+        @media (max-width: 800px) {
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h2 {
+                font-size: 22px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            section {
+                margin: 25px 12px;
+                padding: 25px;
+            }
+
+            .title {
+                font-size: 28px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .image-box img {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     الصفحة الرئيسية
+========================== -->
+
+<header>
+
+    <div class="hero">
+
+        <h1>
+            🤖 من فكرة صغيرة إلى مستقبل كبير
+        </h1>
+
+        <h2>
+            رحلة معلمة وطلاب في عالم البرمجة والذكاء الاصطناعي
+        </h2>
+
+        <p>
+            عندما تتحول البرمجة من مادة دراسية إلى وسيلة لصناعة المستقبل...
+            تبدأ الحكاية.
+        </p>
+
+        <a href="#story" class="btn">
+            🚀 ابدأ الرحلة
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     بداية القصة
+========================== -->
+
+<section id="story">
+
+    <h2 class="title">
+        👩‍🏫 <span>بداية الحكاية</span>
+    </h2>
+
+    <div class="story">
+
+        <p>
+            في صباح يوم دراسي جديد، دخلت معلمة البرمجة إلى فصلها،
+            فوجدت طلابها أمام أجهزة الحاسوب، وكانت عيونهم تحمل الكثير
+            من الفضول والحماس لاكتشاف عالم جديد.
+        </p>
+
+        <p>
+            ابتسمت المعلمة وقالت:
+        </p>
+
+        <div class="quote">
+            "صباح الخير يا أبطال المستقبل... هل أنتم مستعدون لصناعة شيء جديد؟"
+        </div>
+
+        <p>
+            رفع أحد الطلاب يده وسأل:
+        </p>
+
+        <div class="quote">
+            "يا معلمتي، هل البرمجة فعلًا يمكن أن تغير حياتنا؟"
+        </div>
+
+        <p>
+            نظرت إليه المعلمة وقالت بثقة:
+        </p>
+
+        <div class="quote">
+            "البرمجة لا تغير حياتنا وحدها،
+            ولكنها تمنحنا القدرة على أن نكون نحن من يصنع التغيير."
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     التحدي
+========================== -->
+
+<section>
+
+    <h2 class="title">
+        💡 <span>التحدي يبدأ</span>
+    </h2>
+
+    <div class="story">
+
+        <p>
+            قررت المعلمة أن تمنح طلابها تحديًا مختلفًا.
+            لم تطلب منهم حفظ أكواد أو حل تمارين تقليدية،
+            بل قالت لهم:
+        </p>
+
+        <div class="quote">
+            "ابحثوا عن مشكلة حقيقية، وحاولوا أن تصنعوا لها حلًا
+            باستخدام البرمجة والذكاء الاصطناعي."
+        </div>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="icon">
+                💻
+            </div>
+
+            <h3>
+                البرمجة
+            </h3>
+
+            <p>
+                تعلم الطلاب كيف يحولون الأفكار إلى برامج وحلول حقيقية.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">
+                🧠
+            </div>
+
+            <h3>
+                الذكاء الاصطناعي
+            </h3>
+
+            <p>
+                اكتشف الطلاب كيف يمكن للذكاء الاصطناعي أن يساعدهم
+                في التعلم وحل المشكلات.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">
+                🚀
+            </div>
+
+            <h3>
+                الإبداع
+            </h3>
+
+            <p>
+                تعلم الطلاب أن الفكرة الصغيرة يمكن أن تتحول إلى مشروع كبير.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     فكرة الطلاب
+========================== -->
+
+<section>
+
+    <h2 class="title">
+        🧠 <span>فكرة الطلاب</span>
+    </h2>
+
+    <div class="story">
+
+        <p>
+            اقترحت إحدى الطالبات إنشاء مساعد ذكي يساعد الطلاب
+            على تعلم البرمجة خطوة بخطوة.
+        </p>
+
+        <p>
+            لكن المساعد لن يعطي الطالب الحل مباشرة،
+            بل سيجعله يفكر ويكتشف الخطأ بنفسه.
+        </p>
+
+        <div class="quote">
+            "نحن لا نريد أن نستخدم التكنولوجيا فقط...
+            نريد أن نصنعها."
+        </div>
+
+    </div>
+
+
+    <div class="code-box">
+
+        &lt;AI Assistant&gt;<br>
+
+        &nbsp;&nbsp;Learn Programming<br>
+
+        &nbsp;&nbsp;Think<br>
+
+        &nbsp;&nbsp;Solve Problems<br>
+
+        &nbsp;&nbsp;Create The Future<br>
+
+        &lt;/AI Assistant&gt;
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     صورة الطلاب
+========================== -->
+
+<section>
+
+    <h2 class="title">
+        🏆 <span>من الفصل إلى منصة التكريم</span>
+    </h2>
+
+    <div class="image-box">
+
+        <img
+            src="students.webp"
+            alt="طلاب ومعلمون في فعالية تعليمية">
+
+        <p class="caption">
+            جانب من فعاليات الطلاب والأنشطة التعليمية
+        </p>
+
+    </div>
+
+
+    <div class="story">
+
+        <p>
+            بعد أيام طويلة من العمل والتجربة وتصحيح الأخطاء،
+            بدأ الطلاب يكتشفون أن النجاح لا يأتي من المحاولة الأولى،
+            وإنما من الاستمرار والتعلم من الأخطاء.
+        </p>
+
+        <p>
+            ومع كل مشروع جديد، أصبح الطلاب أكثر ثقة في قدراتهم
+            وأكثر استعدادًا لخوض تحديات المستقبل.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     دعم المتفوقين
+========================== -->
+
+<section>
+
+    <h2 class="title">
+        🇪🇬 <span>دعم المتفوقين وصناعة المستقبل</span>
+    </h2>
+
+    <div class="image-box">
+
+        <img
+            src="students.webp"
+            alt="فعالية تضم طلابًا ومعلمين">
+
+        <p class="caption">
+            مشاركة الطلاب في فعالية تعليمية وتكنولوجية
+        </p>
+
+    </div>
+
+
+    <div class="story">
+
+        <p>
+            يمثل الاهتمام بالبرمجة والذكاء الاصطناعي خطوة مهمة
+            في إعداد الطلاب للمهارات التي يحتاجها عالم المستقبل.
+        </p>
+
+        <p>
+            ويأتي دعم الطلاب وتشجيعهم على الإبداع والتعلم
+            ليؤكد أن الاجتهاد والتطوير المستمر يمكن أن يفتح
+            أبوابًا جديدة أمام أبنائنا الطلاب.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SPRIX والشراكة
+========================== -->
+
+<section>
+
+    <h2 class="title">
+        🌍 <span>شراكة من أجل المستقبل</span>
+    </h2>
+
+    <div class="image-box">
+
+        <img
+            src="sprix.jpg"
+            alt="شراكة مصرية يابانية مرتبطة بالتعليم والتكنولوجيا">
+
+        <p class="caption">
+            شراكة وتعاون في مجال التعليم والتكنولوجيا
+        </p>
+
+    </div>
+
+
+    <div class="story">
+
+        <p>
+            لا يتوقف تعلم البرمجة داخل الفصل الدراسي فقط،
+            بل يمكن أن يمتد من خلال التدريب والشراكات
+            التي تمنح الطلاب والمعلمين فرصًا جديدة للتعلم والتطوير.
+        </p>
+
+        <p>
+            ومع التعاون بين المؤسسات التعليمية والجهات المتخصصة
+            في التكنولوجيا، يحصل الطلاب على فرصة لاكتشاف
+            عالم البرمجة والذكاء الاصطناعي بصورة أكثر واقعية.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     رسالة المعلمة
+========================== -->
+
+<section class="final">
+
+    <h2>
+        🌟 رسالة المعلمة
+    </h2>
+
+    <p>
+        "لا أريد من طلابي أن يكونوا مستخدمين للتكنولوجيا فقط...
+        أريدهم أن يكونوا صانعيها."
+    </p>
+
+    <br>
+
+    <p>
+        قد تبدأ أعظم الاختراعات بفكرة صغيرة،
+        وقد يبدأ مستقبل عظيم بكود كتبه طالب داخل فصل دراسي.
+    </p>
+
+</section>
+
+
+<!-- =========================
+     النهاية
+========================== -->
+
+<footer>
+
+    <p>
+        🤖 مشروع التخرج: إنشاء قصة باستخدام أدوات الذكاء الاصطناعي
+    </p>
+
+    <p>
+        إعداد:
+        <strong>
+            معلمة البرمجة والذكاء الاصطناعي
+        </strong>
+    </p>
+
+    <p>
+        🇪🇬 تعليم اليوم... يصنع مبرمجي ومبتكري الغد
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
